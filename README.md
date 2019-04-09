@@ -9,6 +9,8 @@ bundle install
 
 ridk exec gem uninstall sqlite3
 
+(Select 3 for "all versions", in article it says 2 for all versions, maybe doing 3 instead works?)
+
 
 ridk exec gem install sqlite3 --platform=ruby -v 1.3.13
 </p>
