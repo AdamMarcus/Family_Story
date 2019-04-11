@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
   resource :users, only: [:new, :create, :loginpage, :validatelogin]
   resources :stories
-
-  get 'site/loginpage'
-  get 'site/readStory'
-  get 'site/writePage'
-  get 'site/browse'
-
+  
   get 'stories/new'
   get 'stories/show'
   # get 'stories/index'
