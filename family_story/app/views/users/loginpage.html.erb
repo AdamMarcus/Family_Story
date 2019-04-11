@@ -4,7 +4,10 @@
 <%= form_for @user do |user_form| %>
     Username: <%= user_form.text_field :username %> <br />
 
-    <%= user_form.submit 'Login'%>
+    <!---
+    This is the form route. Instead, use the bellow "link_to" to send to the right method.
+    <%= user_form.submit 'Login'%> -->
+    <%=link_to "Login", users_validatelogin_path(@user)%> <br />
 <% end %>
 
 <%=link_to "New User", users_new_path%>

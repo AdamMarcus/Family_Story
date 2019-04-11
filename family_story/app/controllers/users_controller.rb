@@ -27,7 +27,16 @@ class UsersController < ApplicationController
     end
 
     def validatelogin
-        
+        # @user = User.find(params[:username])
+        # if @user
+            #redirect_to stories_path    
+        # else 
+        redirect_to users_testroute_path
+        # end
+    end
+
+    def testroute
+        @users = User.all
     end
 
     private
