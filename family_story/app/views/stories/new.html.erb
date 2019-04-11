@@ -1,8 +1,9 @@
+<%=link_to "Logout", users_loginpage_path%>
 <%= form_for @story do |story_form| %>
     Title: <%= story_form.text_field :title %> <br />
     
     Story Body: <%= story_form.text_field :body %> <br />
 
-    <%= story_form.submit 'Save'%>
+    <%= story_form.submit 'Save'%> <%=link_to "Cancel", stories_path%>
 
 <% end %>
