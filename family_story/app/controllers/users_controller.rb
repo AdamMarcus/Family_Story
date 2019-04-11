@@ -15,10 +15,19 @@ class UsersController < ApplicationController
         # If the save was successful
         if @user.save
             # do something
+            print("Creating a new user " + @user.username + ".")
             redirect_to stories_path
         else
             render 'new'
         end
+    end
+
+    def loginpage
+        @user = User.new
+    end
+
+    def validatelogin
+        
     end
 
     private
