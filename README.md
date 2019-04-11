@@ -15,8 +15,8 @@ ridk exec gem uninstall sqlite3
 ridk exec gem install sqlite3 --platform=ruby -v 1.3.13
 </p>
 
+<h1>To get Family Story working locally:</h1>
 <p>
-To get Family Story working locally:
   Clone the repository
   
   Move into the directory "Family_Story\family_story
