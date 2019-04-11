@@ -1,7 +1,11 @@
+<%=link_to "Logout", site_loginPage_path%>
 <% @stories.each do |story| %>
     <p>
         Title: <%= story.title %> <br />
-        Body: <%= story.body %>
+        Body: <%= story.body %> <br />
+        <%=link_to "Read More", stories_show_path%> <br />
     </p>
 <% end %>
+
+<%=link_to "Write a new story", stories_new_path%>
 
