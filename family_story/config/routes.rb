@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'site/browse'
 
   get 'stories/new'
+  get 'stories/show'
   # get 'stories/index'
 
   get 'users/new'

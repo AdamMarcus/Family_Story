@@ -3,7 +3,7 @@
     <p>
         Title: <%= story.title %> <br />
         Body: <%= story.body %> <br />
-        <%=link_to "Read More", stories_show_path%> <br />
+        <%=link_to "Read More", story_path(story)%> <br />
     </p>
 <% end %>
 

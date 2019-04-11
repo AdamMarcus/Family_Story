@@ -9,6 +9,7 @@ class StoriesController < ApplicationController
     # Read an individual story
     def show
         # Will have read page template
+        @story = Story.find(params[:id])
     end
 
     # Display form for new story
