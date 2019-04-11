@@ -14,3 +14,17 @@ ridk exec gem uninstall sqlite3
 
 ridk exec gem install sqlite3 --platform=ruby -v 1.3.13
 </p>
+
+<p>
+To get Family Story working locally:
+  Clone the repository
+  
+  Move into the directory "Family_Story\family_story
+  
+  Run the command "rails db:migrate"
+  
+  Run the command "rails server"
+  
+Now if you browse to the URL "localhost:3000" you will arive at the local deployment of Family Story
+</p>
+  
