@@ -6,5 +6,6 @@
 <%= form_for @user do |user_form| %>
     Username: <%= user_form.text_field :username %> <br />
 
-    <%= user_form.submit 'Create New User'%>
+    <%= user_form.submit 'Create New User'%> <%=link_to "Login Page", users_loginpage_path%>
+
 <% end %>

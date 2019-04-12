@@ -10,7 +10,6 @@ class UsersController < ApplicationController
     def create
         # Will not have template, save new account and direct to browse page or back go login page
         tempUsername = allowed_params[:username]
-        puts "## #{tempUsername} ##"
         if User.exists?(username: tempUsername)
             puts ("## Verified username #{tempUsername} already exists.")
             flash[:notice] = "Username #{tempUsername} already exists. Please pick a different username."
@@ -38,11 +37,14 @@ class UsersController < ApplicationController
     end
 
     def validatelogin
-        @user = User.find_by(username: params[:username])
-        if @user
-            #redirect_to stories_path    
+        tempUsername = allowed_params[:username]
+        puts ("## #{tempUsername} ##")
+        if  User.exists?(username: tempUsername)
+            puts ("## Verified username #{tempUsername} already exists.")
+            redirect_to stories_path    
         else 
-            redirect_to users_testroute_path
+            flash[:notice] = "No Username \"#{tempUsername}\" was found."
+            redirect_to users_loginpage_path
         end
     end
 

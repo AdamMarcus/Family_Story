@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'users/new'
   get 'users/loginpage'
-  get 'users/validatelogin'
+  post 'users/validatelogin'
   get 'users/testroute'
   
   root 'users#loginpage'
