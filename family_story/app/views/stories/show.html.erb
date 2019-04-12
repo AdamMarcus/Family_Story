@@ -1,6 +1,6 @@
 <%=link_to "Logout", users_loginpage_path%>
-<h1>Title: <%= @story.title %></h1>
+<h1><%= @story.title %></h1>
 <p>
-Body: <%= @story.title %>
+<%= @story.body %>
 </p>
 <%=link_to "Back to Browse", stories_path%>
