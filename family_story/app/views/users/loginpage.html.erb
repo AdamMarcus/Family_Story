@@ -1,11 +1,14 @@
+<link rel=”stylesheet” type=”text/css” href=“family_story\app\assets\stylesheets\loginpage.css”/>
 <h1>Login</h1>
-<p>Enter your user name and password and click "login" to login.</p>
+<p>Enter your username and password and click "login" to login.</p>
 
+<p>
 <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 <%= form_for @user, :url => users_validatelogin_path(@user) do |user_form| %>
-    Username: <%= user_form.text_field :username %> <br />
+    Username: <%= user_form.text_field :username %>
+    <br/>
 
     <!---
     This is the form route. Instead, use the bellow "link_to" to send to the right method.
@@ -15,4 +18,4 @@
 <% end %>
 
 <%=link_to "New User", users_new_path%>
-
+</p>

@@ -1,0 +1,20 @@
+h1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*.text_field{} /*May have to not have a dot. "text_field"*/
+
+a:link,a:visited{ /* link formatting */
+  background-color: dodgerblue;
+  padding: 14px 25px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+a:hover,a:active{
+  opacity: 0.8;
+}

@@ -1,11 +1,14 @@
+<link rel=”stylesheet” type=”text/css” href=“family_story\app\assets\stylesheets\browsepage.css”/>
+
 <%=link_to "Logout", users_loginpage_path%>
 <% @stories.each do |story| %>
-    <p>
+        <h3>
         Title: <%= story.title %> <br />
+        </h3>
+        <p>
         Body: <%= story.body %> <br />
         <%=link_to "Read More", story_path(story)%> <br />
     </p>
 <% end %>
 
 <%=link_to "Write a new story", stories_new_path%>
-

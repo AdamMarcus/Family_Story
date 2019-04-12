@@ -1,0 +1,10 @@
+h1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+p{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*.text_field{} /*May have to not have a dot. "text_field"*/
