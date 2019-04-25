@@ -17,10 +17,11 @@ class UsersController < ApplicationController
         else
             puts "## Verified no user by username exists. Creating new user."
             @user = User.new(allowed_params)
-
+            
             if @user.save
                 # do something
                 print("Creating a new user " + @user.username + ".")
+                @@currentUser = User.where(username: tempUsername).take
                 redirect_to stories_path
             else
                 render 'new'
