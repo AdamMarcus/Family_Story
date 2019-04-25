@@ -5,6 +5,7 @@
   <a href="#Browse">Browse</a>
   <a href="#Write">Write</a>
   <a href="#Logout"><%=link_to "Logout", users_loginpage_path%></a>
+  <a> Current User: <%= @user.username %> </a>
 </div>
 
 <% @stories.each do |story| %>

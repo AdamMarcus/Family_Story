@@ -41,6 +41,8 @@ class UsersController < ApplicationController
         puts ("## #{tempUsername} ##")
         if  User.exists?(username: tempUsername)
             puts ("## Verified username #{tempUsername} already exists.")
+            @@currentUser = User.where(username: tempUsername).take
+            puts ("## #{@@currentUser.username} ##")
             redirect_to stories_path    
         else 
             flash[:notice] = "No Username \"#{tempUsername}\" was found."

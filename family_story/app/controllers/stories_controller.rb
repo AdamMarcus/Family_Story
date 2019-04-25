@@ -4,12 +4,14 @@ class StoriesController < ApplicationController
     def index
         # Will have browse page template
         @stories = Story.all
+        @user = @@currentUser
     end
 
     # Read an individual story
     def show
         # Will have read page template
         @story = Story.find(params[:id])
+        @user = @@currentUser
     end
 
     # Display form for new story
