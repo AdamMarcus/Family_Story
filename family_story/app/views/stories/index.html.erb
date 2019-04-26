@@ -4,16 +4,16 @@
   <a class="active" href="#home">Home</a>
   <a href="#Browse">Browse</a>
   <a href="#Write">Write</a>
-  <a href="#Logout"><%=link_to "Logout", users_loginpage_path%></a>
   <a> Current User: <%= @user.username %> </a>
+  <a href="#Logout"><%=link_to "Logout", users_loginpage_path%></a>
 </div>
 
 <% @stories.each do |story| %>
-        <h3>
-        Title: <%= story.title %> <br />
-        </h3>
+        <h2>
+        <!-- Title: --> <%= story.title %> <br />
+      </h2>
         <p>
-        Body: <%= story.body %> <br />
+        <!-- Body: --> <%= story.body %> <br />
         <%=link_to "Read More", story_path(story)%> <br />
     </p>
 <% end %>

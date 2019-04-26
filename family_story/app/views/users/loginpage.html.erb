@@ -2,13 +2,14 @@
 <h1>Login</h1>
 <p>Enter your username and password and click "login" to login.</p>
 
+<div class="content">
 <p>
 <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 <%= form_for @user, :url => users_validatelogin_path(@user) do |user_form| %>
     Username: <%= user_form.text_field :username, :required => true %>
-    <br/>
+
 
     <!---
     This is the form route. Instead, use the bellow "link_to" to send to the right method.
@@ -16,6 +17,7 @@
     <%= user_form.submit 'Login'%>
     <!-- <%=link_to "Login", users_validatelogin_path(:username)%> <br /> -->
 <% end %>
-
+<br/>
 <%=link_to "New User", users_new_path%>
 </p>
+</div>
