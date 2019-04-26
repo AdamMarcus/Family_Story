@@ -1,11 +1,12 @@
+<link rel=”stylesheet” type=”text/css” href=“family_story\app\assets\stylesheets\new.css”/>
 <h1>Create an Account</h1>
 <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
 <% end %>
-
+<div class="content">
 <%= form_for @user do |user_form| %>
-    Username: <%= user_form.text_field :username, :required => true %> <br />
+    Username: <%= user_form.text_field :username, :required => true %>
 
-    <%= user_form.submit 'Create New User'%> <%=link_to "Login Page", users_loginpage_path%>
-
+    <%= user_form.submit 'Create New User'%> <br /> <br /> <%=link_to "Login Page", users_loginpage_path%>
+</div>
 <% end %>
