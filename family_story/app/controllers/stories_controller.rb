@@ -3,7 +3,9 @@ class StoriesController < ApplicationController
     # On browse page list all stories
     def index
         # Will have browse page template
+        # make all Stories available in a variable to the view
         @stories = Story.all
+        # Make the current user available to the view
         @user = @@currentUser
     end
 
@@ -16,22 +18,17 @@ class StoriesController < ApplicationController
 
     # Display form for new story
     def new
-        # Will have write page template
-        
-        # Instantiate a new instance of the Drink class that is empty.
-        # This form of variable can be accessed in new.html.erb
         @story = Story.new
     end
 
     # Save new story record
     def create
-        # Will not have own template, save and re-direct to browse page
-        # Use allowed parameters to create a new story
+        # Crate a new story from the allowed paramaeters
         @story = Story.new(allowed_params)
 
         # If the save was successful
         if @story.save
-            # do something
+            # redirect them to the browse page
             redirect_to stories_path
         else
             render 'new'
@@ -55,7 +52,7 @@ class StoriesController < ApplicationController
 
     private
         def allowed_params
-            # Only this one attribute will be allowed, no hacking
+            # Prevent injection attack
             params.require(:story).permit(:title, :body)
         end
 end
